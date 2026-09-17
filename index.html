@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#120722" />
+  <meta name="description" content="OXO Discord Bot — music, economy, games, pets, battles, social commands and server tools." />
+  <title>OXO — Discord Bot</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-noise" aria-hidden="true"></div>
+  <div class="aurora aurora-a" aria-hidden="true"></div>
+  <div class="aurora aurora-b" aria-hidden="true"></div>
+  <div class="stars" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="shell nav-wrap">
+      <a class="brand" href="#home" aria-label="OXO home">
+        <img src="assets/oxo-avatar.png" alt="OXO bot avatar" />
+        <span>OXO</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+
+      <nav class="nav-links" id="navLinks">
+        <a class="active" href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#help">Help</a>
+        <a href="#developer">Developer</a>
+        <a href="#feedback">Feedback</a>
+      </nav>
+
+      <a class="discord-btn nav-cta" href="https://discord.com/oauth2/authorize?client_id=1545322856274071592" target="_blank" rel="noreferrer">
+        <span class="discord-mark">◉</span> Add to Server
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero shell" id="home">
+      <div class="hero-copy reveal">
+        <p class="kicker">SIMPLE • POWERFUL • ALWAYS WITH YOU</p>
+        <h1><span>OXO</span> Discord Bot</h1>
+        <h2>Music, battle, economy, fun, utility — together.</h2>
+        <p class="hero-text">A multipurpose Discord bot built to make communities more active, more fun, and easier to manage without filling your server with separate bots.</p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="https://discord.com/oauth2/authorize?client_id=1545322856274071592" target="_blank" rel="noreferrer">◉ Add to Server <span>→</span></a>
+          <a class="btn ghost" href="#features">Explore Commands <span>↓</span></a>
+        </div>
+
+        <div class="hero-stats">
+          <div><strong>24/7</strong><span>Music system</span></div>
+          <div><strong>8+</strong><span>Feature groups</span></div>
+          <div><strong>1 Bot</strong><span>All-in-one</span></div>
+        </div>
+      </div>
+
+      <div class="hero-art reveal delay-1">
+        <div class="orbit orbit-1"></div>
+        <div class="orbit orbit-2"></div>
+        <div class="orbit orbit-3"></div>
+        <div class="mascot-ring">
+          <div class="pulse-ring"></div>
+          <img src="assets/oxo-avatar.png" alt="OXO purple anime bot profile" class="mascot" />
+        </div>
+        <div class="float-badge badge-music">♫ 24/7 Music</div>
+        <div class="float-badge badge-battle">⚔ Battles</div>
+        <div class="float-badge badge-reward">✦ Rewards</div>
+        <div class="float-badge badge-fun">♡ Fun Commands</div>
+      </div>
+    </section>
+
+    <section class="section shell" id="features">
+      <div class="section-title reveal">
+        <div>
+          <p class="eyebrow">FEATURES & COMMANDS</p>
+          <h2>Explore every OXO system.</h2>
+          <p>Click a category and the command panel changes instantly. Click any command to copy it.</p>
+        </div>
+        <div class="command-search-wrap">
+          <span>⌕</span>
+          <input id="commandSearch" type="search" placeholder="Search commands…" autocomplete="off" />
+        </div>
+      </div>
+
+      <div class="feature-console reveal">
+        <div class="category-tabs" id="categoryTabs" role="tablist" aria-label="OXO feature categories"></div>
+
+        <div class="feature-body">
+          <div class="command-side">
+            <div class="panel-heading">
+              <div class="panel-icon" id="panelIcon">♫</div>
+              <div>
+                <h3 id="panelTitle">Music Commands</h3>
+                <p id="panelSubtitle">Playback, queue, playlists, 24/7 and music controls.</p>
+              </div>
+              <span class="command-count" id="commandCount"></span>
+            </div>
+            <div class="command-list" id="commandList"></div>
+            <div class="no-results" id="noResults" hidden>No matching commands in this category.</div>
+          </div>
+
+          <aside class="feature-showcase" id="featureShowcase">
+            <div class="showcase-glow"></div>
+            <div class="showcase-copy">
+              <span class="showcase-icon" id="showcaseIcon">♫</span>
+              <p class="showcase-label" id="showcaseLabel">MUSIC</p>
+              <h3 id="showcaseTitle">Feel the beat together.</h3>
+              <p id="showcaseText">Play songs, control queues, use 24/7 voice mode, playlists, autoplay and server-specific music prefixes.</p>
+            </div>
+            <img src="assets/oxo-avatar.png" alt="OXO bot mascot" />
+            <div class="equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" id="help">
+      <div class="section-title reveal compact">
+        <div>
+          <p class="eyebrow">HELP & GETTING STARTED</p>
+          <h2>Set up OXO in minutes.</h2>
+        </div>
+      </div>
+
+      <div class="help-grid">
+        <article class="help-card reveal">
+          <span class="step">01</span>
+          <h3>Add OXO</h3>
+          <p>Authorize OXO for your Discord server using the official invite button.</p>
+          <a href="https://discord.com/oauth2/authorize?client_id=1545322856274071592" target="_blank" rel="noreferrer">Add to Server →</a>
+        </article>
+        <article class="help-card reveal delay-1">
+          <span class="step">02</span>
+          <h3>Accept & configure</h3>
+          <p>New users can accept the terms, then server owners can configure supported prefixes and channels.</p>
+          <code>/prefix prefix:-z</code>
+        </article>
+        <article class="help-card reveal delay-2">
+          <span class="step">03</span>
+          <h3>Start exploring</h3>
+          <p>Open help, shortcuts, your profile, music, economy, battles, recipes and the rest of OXO.</p>
+          <code>/oxo help</code>
+        </article>
+      </div>
+
+      <div class="quick-help reveal">
+        <div><code>/help</code><span>Open OXO help.</span></div>
+        <div><code>/oxo help</code><span>Browse feature categories.</span></div>
+        <div><code>oxo sc</code><span>Show shortcut commands.</span></div>
+        <div><code>oxo profile</code><span>Open your OXO profile.</span></div>
+      </div>
+    </section>
+
+    <section class="section shell" id="developer">
+      <div class="developer-card reveal">
+        <div class="developer-photo">
+          <img src="assets/mahmudul-hasan.png" alt="Mahmudul Hasan" />
+          <div class="developer-photo-overlay"></div>
+          <span>OWNER / DEVELOPER</span>
+        </div>
+        <div class="developer-info">
+          <p class="eyebrow">ABOUT THE DEVELOPER</p>
+          <h2>Mahmudul Hasan</h2>
+          <a class="handle" href="https://discord.com/" target="_blank" rel="noreferrer">Discord · @dyinglight3_</a>
+          <p class="developer-bio">Cybersecurity professional and Discord developer based in Qatar. Focused on SOC monitoring, security operations, automation, defensive workflows and building interactive Discord systems.</p>
+
+          <div class="developer-facts">
+            <div><span>Age</span><strong>20</strong></div>
+            <div><span>From</span><strong>Qatar</strong></div>
+            <div><span>Role</span><strong>SOC Analyst</strong></div>
+            <div><span>Cybersecurity</span><strong>Doha · 2025–2026</strong></div>
+          </div>
+
+          <p class="developer-note">Developer of OXO bot systems, automation, economy/game logic, music experiences and community tools.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" id="feedback">
+      <div class="feedback-wrap">
+        <div class="feedback-copy reveal">
+          <p class="eyebrow">FEEDBACK + FREE REWARD</p>
+          <h2>Your feedback helps OXO grow.</h2>
+          <p>Send useful feedback, suggestions or bug reports. After review, eligible feedback can receive a free OXO reward.</p>
+          <div class="reward-card">
+            <span>🎁</span>
+            <div><strong>Free reward after feedback</strong><p>Reward claims are reviewed before coins or gems are issued.</p></div>
+          </div>
+        </div>
+
+        <form class="feedback-form reveal delay-1" id="feedbackForm">
+          <div class="field-grid">
+            <label>Discord username
+              <input name="discordUsername" required placeholder="e.g. dyinglight3_" maxlength="40" />
+            </label>
+            <label>Server owner / server post
+              <input name="serverPost" required placeholder="Owner, staff, member, or post link/info" maxlength="120" />
+            </label>
+          </div>
+          <label>Server name
+            <input name="serverName" required placeholder="Your Discord server name" maxlength="80" />
+          </label>
+          <label>Feedback
+            <textarea name="feedback" required minlength="10" maxlength="1200" rows="6" placeholder="Tell us what you liked, what should change, bugs you found, or what OXO should add next…"></textarea>
+          </label>
+          <button class="btn primary submit-btn" type="submit">➤ Submit Feedback</button>
+          <div class="form-message" id="formMessage" role="status"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-content">
+      <div class="footer-brand">
+        <img src="assets/oxo-avatar.png" alt="OXO" />
+        <div><strong>OXO</strong><span>Discord Bot</span></div>
+      </div>
+      <div class="footer-links">
+        <a href="#home">Home</a><a href="#features">Features</a><a href="#help">Help</a><a href="#developer">Developer</a><a href="#feedback">Feedback</a>
+      </div>
+      <p>© 2026 OXO · Mahmudul Hasan</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
