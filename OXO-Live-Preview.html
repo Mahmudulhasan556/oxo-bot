@@ -57,6 +57,23 @@ a{color:inherit}.shell{width:min(1180px,calc(100% - 40px));margin:auto}
 @media(max-width:650px){.shell{width:min(100% - 26px,1180px)}.site-header{padding:10px 0}.nav-wrap{height:57px}.brand img{width:37px;height:37px}.brand span{font-size:20px}.hero{min-height:0;padding:55px 0 30px}.hero h1{font-size:52px;letter-spacing:-3px}.hero h2{font-size:15px}.hero-stats{gap:14px}.hero-stats div{padding-right:14px}.hero-art{height:350px}.mascot-ring{width:200px;height:200px}.orbit-1{width:245px;height:245px}.orbit-2{width:305px;height:305px}.orbit-3{width:350px;height:350px}.float-badge{font-size:9px;padding:8px 10px}.badge-music{right:0;top:40px}.badge-battle{left:-3px;bottom:72px}.badge-reward{right:-3px;bottom:45px}.badge-fun{display:none}.section{padding:72px 0}.section-title h2{font-size:38px}.feature-console{padding:11px;border-radius:18px}.category-tab{min-width:110px;padding:10px}.panel-heading{grid-template-columns:auto 1fr}.command-count{grid-column:2}.command-row{grid-template-columns:1fr;gap:6px}.copy-hint{display:none}.feature-showcase{min-height:300px;padding:22px}.showcase-copy{max-width:73%}.showcase-copy h3{font-size:25px}.feature-showcase img{width:205px;height:205px;right:-40px}.equalizer{left:22px;bottom:19px}.help-grid{grid-template-columns:1fr}.quick-help{grid-template-columns:1fr}.developer-card{padding:13px;gap:24px}.developer-photo{min-height:470px}.developer-info h2{font-size:39px}.developer-facts{grid-template-columns:1fr 1fr}.field-grid{grid-template-columns:1fr}.feedback-copy h2{font-size:40px}.footer-links{flex-wrap:wrap;gap:12px 18px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 
+
+/* Maintenance announcement */
+.maintenance-wrap{position:relative;z-index:45;width:100%;padding:1px 0 0;background:linear-gradient(180deg,rgba(15,3,8,.88),rgba(8,5,15,0));overflow:hidden}
+.maintenance-banner{position:relative;width:min(1180px,calc(100% - 40px));margin:0 auto;min-height:48px;display:flex;align-items:center;justify-content:center;overflow:hidden;border-top:1px solid rgba(255,84,105,.26);border-bottom:1px solid rgba(255,84,105,.16);background:linear-gradient(90deg,transparent 0%,rgba(78,8,19,.42) 8%,rgba(117,12,29,.32) 50%,rgba(78,8,19,.42) 92%,transparent 100%);box-shadow:0 12px 34px rgba(105,7,22,.12);isolation:isolate}
+.maintenance-banner:before{content:"";position:absolute;inset:-1px 15%;z-index:-1;background:linear-gradient(100deg,transparent 0%,rgba(255,63,90,0) 35%,rgba(255,92,116,.10) 48%,rgba(255,63,90,.23) 50%,rgba(255,92,116,.10) 52%,rgba(255,63,90,0) 65%,transparent 100%);transform:translateX(-85%);animation:maintenanceSweep 5.5s ease-in-out infinite}
+.maintenance-content{position:relative;display:flex;align-items:center;justify-content:center;gap:11px;width:100%;padding:12px 72px;color:#ffd9df;text-align:center;font-size:11px;letter-spacing:.1px}
+.maintenance-icon{display:grid;place-items:center;width:24px;height:24px;flex:0 0 24px;border:1px solid rgba(255,103,124,.42);border-radius:7px;background:rgba(255,48,77,.12);color:#ff6b82;font-size:13px;filter:drop-shadow(0 0 7px rgba(255,55,85,.34));animation:maintenanceIconPulse 2s ease-in-out infinite}
+.maintenance-label{font-size:9px;font-weight:950;letter-spacing:1.8px;color:#ff7087;white-space:nowrap}
+.maintenance-divider{width:1px;height:16px;flex:0 0 1px;background:linear-gradient(transparent,rgba(255,100,122,.46),transparent)}
+.maintenance-text{color:#dcb7bf;line-height:1.45}.maintenance-text strong{color:#ffe9ed;font-weight:850}
+.maintenance-pulse{width:7px;height:7px;flex:0 0 7px;border-radius:50%;background:#ff3f5f;box-shadow:0 0 0 0 rgba(255,63,95,.48),0 0 12px rgba(255,63,95,.65);animation:maintenanceDot 1.8s ease-out infinite}
+.maintenance-edge{position:absolute;top:0;bottom:0;width:86px;z-index:2;pointer-events:none}.maintenance-edge-left{left:0;background:linear-gradient(90deg,var(--bg) 5%,rgba(8,5,15,.78) 32%,transparent 100%)}.maintenance-edge-right{right:0;background:linear-gradient(270deg,var(--bg) 5%,rgba(8,5,15,.78) 32%,transparent 100%)}
+@keyframes maintenanceSweep{0%,18%{transform:translateX(-85%);opacity:0}35%{opacity:1}72%{opacity:1}86%,100%{transform:translateX(85%);opacity:0}}
+@keyframes maintenanceIconPulse{0%,100%{transform:scale(1);background:rgba(255,48,77,.10)}50%{transform:scale(1.07);background:rgba(255,48,77,.18)}}
+@keyframes maintenanceDot{0%{box-shadow:0 0 0 0 rgba(255,63,95,.5),0 0 12px rgba(255,63,95,.65)}70%{box-shadow:0 0 0 8px rgba(255,63,95,0),0 0 12px rgba(255,63,95,.38)}100%{box-shadow:0 0 0 0 rgba(255,63,95,0),0 0 12px rgba(255,63,95,.65)}}
+@media(max-width:760px){.maintenance-banner{width:100%;min-height:58px}.maintenance-content{gap:8px;padding:10px 25px}.maintenance-label{display:none}.maintenance-divider{display:none}.maintenance-text{font-size:10px}.maintenance-edge{width:28px}.maintenance-pulse{display:none}}
+
 </style>
 </head>
 <body>
@@ -87,6 +104,20 @@ a{color:inherit}.shell{width:min(1180px,calc(100% - 40px));margin:auto}
       </a>
     </div>
   </header>
+
+  <div class="maintenance-wrap" role="status" aria-live="polite">
+    <div class="maintenance-banner">
+      <div class="maintenance-edge maintenance-edge-left" aria-hidden="true"></div>
+      <div class="maintenance-content">
+        <span class="maintenance-icon" aria-hidden="true">⚠</span>
+        <span class="maintenance-label">MAINTENANCE NOTICE</span>
+        <span class="maintenance-divider" aria-hidden="true"></span>
+        <span class="maintenance-text"><strong>OXO is currently under maintenance.</strong> Tomorrow it will be properly updated and published.</span>
+        <span class="maintenance-pulse" aria-hidden="true"></span>
+      </div>
+      <div class="maintenance-edge maintenance-edge-right" aria-hidden="true"></div>
+    </div>
+  </div>
 
   <main>
     <section class="hero shell" id="home">
